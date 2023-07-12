@@ -21,6 +21,7 @@ body{
     /* width: 70vw; */
     /* border: 1px solid white; */
     margin: auto;
+    margin-top: 6vw;
 }
 
 .header{
@@ -62,13 +63,13 @@ body{
     font-weight: bold;
     border-top: 0.2vw solid white;
     border-bottom: 0.2vw solid white;
-    width: 40vw;
+    /* width: 40vw; */
     margin: auto;
     padding: 1vw 0px;
 }
 
 .givenNumber{
-    font-size: 60px;
+    font-size: 6vw;
     border: 1px solid white;
     width: 200px;
     margin: 2vw auto;
@@ -144,7 +145,7 @@ input{
     font-size: 1.8vw;
 }
 
-@media screen and (min-width:250px) and (max-width:360px){
+@media screen and (min-width:250px) and (max-width:415px){
     .footer{
         flex-direction: column-reverse;
         margin: auto;
