@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Pacifico&family=Playfair+Display:wght@500&family=Roboto+Slab&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Merriweather&family=Pacifico&family=Playfair+Display:wght@500&family=Roboto+Slab&family=Ysabeau+Infant&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+:root{
+    --brown: rgb(79, 16, 16);
+}
+
+body{
+    color: white;
+    background: var(--brown);
+    font-family: 'Ysabeau Infant', sans-serif;
+} 
+
+.container{
+    /* width: 70vw; */
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+    /* border: 1px solid white; */
+}
+
+.playAgainButton{
+    padding: 1vw 1.5vw; 
+    color: var(--brown);
+    font-size: 2vw;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: all 0.2s linear; 
+    border-color: transparent;
+}
+
+.playAgainButton:hover{
+    background: var(--brown);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.418);
+}
+
+.findNumber{
+    font-size: 3.4vw;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: bolder;
+}
+
+.guess{
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: bold;
+    border-top: 0.2vw solid white;
+    border-bottom: 0.2vw solid white;
+    width: 40vw;
+    margin: auto;
+    padding: 1vw 0px;
+}
+
+.givenNumber{
+    font-size: 60px;
+    border: 1px solid white;
+    width: 200px;
+    margin: 2vw auto;
+    text-align: center;
+    padding: 23px 0px;
+    background-color: white;
+    color: var(--brown);
+    transition: all 0.2s linear;
+}
+
+.givenNumber:hover{
+    background-color: var(--brown);
+    color: white;
+    border-color: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 50%;
+}
+
+.footer{
+    /* border: 1px solid white; */
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputField{
+    /* border: 1PX SOLID WHITE; */
+    /* padding: 10px;  */
+}
+
+input{
+    text-align: center;
+    font-size: 32px;
+    width: 183px;
+    color: var(--brown);
+}
+
+.checkButton{
+    width: 186px;
+    padding: 5px 0px;
+    margin-top: 10px;
+    color: var(--brown);
+    font-size: large;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: all 0.2s linear;
+}
+
+.checkButton:hover{
+    background: var(--brown);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.764);
+}
+
+.content{
+    padding: 10px;
+}
+
+.content>h3{
+    font-size: 2.4vw;
+}
+
+.chances{
+    font-size: 1.8vw;
+    margin: 1vw auto;
+}
+
+.highScore{
+    font-size: 1.8vw;
+}
+
+@media screen and (min-width:250px) and (max-width:360px){
+    .footer{
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    input{
+        margin-top: 10px;
+        margin-inline: auto;
+        width: 99vw;
+    }
+
+    .checkButton{
+        margin-inline: auto;
+        width: 100vw;
+    }
+}
