@@ -12,7 +12,7 @@
       <div class="header" id="$header">
         <p class="findNumber">FIND NUMBER</p>
         <div class="playAgainButtonDiv">
-            <button class="playAgainButton">Play Again</button>
+            <button class="playAgainButton" onclick="playAgain()">Play Again</button>
           </div>
       </div>
 
@@ -20,18 +20,19 @@
       <h2 class="guess" id="$guess">Guess My Number !</h2>
 
 
-      <div class="givenNumber" id="$givenNumber">?</div>
-
+      <div class="givenNumber" id="$givenNumber">
+        <p class="questionMark">?</p>
+      </div>
       <div class="footer">
         <div class="inputField" id="$inputField">
             <input type="number" id="$input" name="input" value="" placeholder="00" title="Use Arrow Key to Increase Or Decrease Number">
             <br>
-            <button class="checkButton" id="$checkButton">Check Number</button>
+            <button class="checkButton" id="$checkButton" onclick="check()">Check Number</button>
         </div>
         <div class="content" id="$content">
             <h3>Start Guessing...</h3>
-            <p id="$chances" class="chances">Chances: <span>100</span></p>
-            <p id="$highScore" class="highScore">HighScore: <span>00</span></p>
+            <p id="$chances" class="chances">Chances: <span id="chanceSpan"></span></p>
+            <p id="$highScore" class="highScore">HighScore: <span id="highScoreSpan">00</span></p>
         </div>
       </div>
     </div>

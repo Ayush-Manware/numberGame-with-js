@@ -18,8 +18,8 @@ body{
 } 
 
 .container{
-    /* width: 70vw; */
-    /* border: 1px solid white; */
+    width: 70vw;
+    border: 1px solid white;
     margin: auto;
     margin-top: 6vw;
 }
@@ -81,7 +81,7 @@ body{
 }
 
 .givenNumber:hover{
-    background-color: var(--brown);
+    background-color: transparent;
     color: white;
     border-color: transparent;
     border-bottom: 1px solid white;
@@ -89,10 +89,11 @@ body{
 }
 
 .footer{
+    padding: 2vw 3vw;
     /* border: 1px solid white; */
     margin: 10px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -130,6 +131,7 @@ input{
 
 .content{
     padding: 10px;
+    text-align: center;
 }
 
 .content>h3{
@@ -154,11 +156,11 @@ input{
     input{
         margin-top: 10px;
         margin-inline: auto;
-        width: 99vw;
+        width: 67vw;
     }
 
     .checkButton{
         margin-inline: auto;
-        width: 100vw;
+        width: 68vw;
     }
 }
