@@ -1,3 +1,9 @@
+// function randomNumber(n){
+//   return Math.trunc(Math.random(n) * 100 + 1);
+// }
+
+// console.log(randomNumber());
+
 let randomNumber = (document.getElementById("$givenNumber").innerHTML =
   Math.trunc(Math.random() * 100 + 1));
   console.log(randomNumber);
@@ -5,7 +11,7 @@ let randomNumber = (document.getElementById("$givenNumber").innerHTML =
 let questionMark = document.getElementById("$givenNumber").innerHTML = '?';
 document.getElementById('chanceSpan').innerHTML = 100;
 let chance = 99;
-let highScore;
+let highScore = null;
 
 
 function check() {
@@ -44,24 +50,31 @@ function check() {
 }
 
 
+
 function playAgain(){
+
+  location.reload();
+
   //  let a = document.getElementById('questionMark').innerHTML = '?';
   //  console.log(a);
-  let randomNumber = Math.trunc(Math.random()*100 + 1);
-  console.log(randomNumber)
-  document.getElementById("$givenNumber").innerHTML = randomNumber;
-  document.getElementById("$givenNumber").innerHTML = '?';
+  // let randomNumber = Math.trunc(Math.random()*100 + 1);
+  // console.log(randomNumber)
 
-  document.getElementById('$input').value = null;
 
-  document.getElementsByTagName('h3')[0].innerHTML = 'Start Guessing Again';
+  // document.getElementById("$givenNumber").innerHTML = randomNumber;
+  // document.getElementById("$givenNumber").innerHTML = '?';
 
-  let chance = 100;
-  document.getElementById('chanceSpan').innerHTML = chance;
+  // document.getElementById('$input').value = null;
 
-  document.body.style.backgroundColor = "rgb(79, 16, 16)";
+  // document.getElementsByTagName('h3')[0].innerHTML = 'Start Guessing Again';
+  
+  // let chance = 100;
+  // document.getElementById('chanceSpan').innerHTML = chance;
 
-  document.getElementById('$checkButton').style.display = 'block';
+  // document.body.style.backgroundColor = "rgb(79, 16, 16)";
+
+  // document.getElementById('$checkButton').style.display = 'block';
+  
 
   // if(randomNumber > )    
 
