@@ -4,37 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess The Number</title>
+    <title>Number King</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-   
+    <div class="main">
       <div class="header" id="$header">
-        <p class="findNumber">FIND NUMBER</p>
+        <div class="logo">
+          <img src="./king.png" alt="_KinG" class="kingIcon" />
+          <p class="findNumber">Number king</p>
+        </div>
+        
         <div class="playAgainButtonDiv">
-            <button class="playAgainButton" onclick="playAgain()">Play Again</button>
-          </div>
+          <button class="playAgainButton" onclick="playAgain()">
+            Play Again
+          </button>
+        </div>
       </div>
 
       <div class="container">
-      <h2 class="guess" id="$guess">Guess My Number !</h2>
+        <h2 class="guess" id="$guess">Guess My Number !</h2>
 
-
-      <div class="givenNumber" id="$givenNumber">
-        <p class="questionMark" id="$questionMark">?</p>
-      </div>
-
-
-      <div class="footer">
-        <div class="inputField" id="$inputField">
-            <input type="number" id="$input" name="input" value="" placeholder="00" title="Use Arrow Key to Increase Or Decrease Number">
-            <br>
-            <button class="checkButton" id="$checkButton" onclick="check()">Check Number</button>
+        <div class="givenNumber" id="$givenNumber">
+          <p class="questionMark" id="$questionMark">?</p>
         </div>
-        <div class="content" id="$content">
+
+        <div class="footer">
+          <div class="inputField" id="$inputField">
+            <input
+              type="number"
+              id="$input"
+              name="input"
+              value=""
+              placeholder="00"
+              title="Use Arrow Key to Increase Or Decrease Number"
+            />
+            <br />
+            <button class="checkButton" id="$checkButton" onclick="check()">
+              Check Number
+            </button>
+          </div>
+          <div class="content" id="$content">
             <h3>Start Guessing...</h3>
-            <p id="$chances" class="chances">Chances: <span id="chanceSpan"></span></p>
-            <p id="$highScore" class="highScore">HighScore: <span id="highScoreSpan">00</span></p>
+            <p id="$chances" class="chances">
+              Chances: <span id="chanceSpan"></span>
+            </p>
+            <p id="$highScore" class="highScore">
+              HighScore: <span id="highScoreSpan">00</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

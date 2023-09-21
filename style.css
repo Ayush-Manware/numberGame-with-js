@@ -4,7 +4,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    /* border: 1px solid rgb(255, 255, 255); */
+    color: white;
 }
 
 :root{
@@ -12,48 +12,72 @@
 }
 
 body{
-    color: white;
-    background: var(--brown);
+    background-color: rgb(41, 41, 41);
+}
+
+.logo{
+    letter-spacing: 2px;
+}
+
+.kingIcon{
+    width: 7vw;
+    margin: auto;
+    display: block;
+    filter: drop-shadow( 3px 3px 8px rgba(0, 0, 0, 0.338));
+}
+
+.findNumber{
+    font-size: 1.4vw;
     font-family: 'Ysabeau Infant', sans-serif;
+    padding-bottom: 5px;
+    font-weight: bolder;
+}
+
+.main{
+    color: white;
+    height: 100vh;
+    background-image: url("./eyestetix-studio-m0EzHtexapU-unsplash.jpg");
+    font-family: 'Ysabeau Infant', sans-serif;
+    background-position: left;
+    background-size: cover;
 } 
 
 .container{
     width: 70vw;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     margin: auto;
-    margin-top: 6vw;
+    margin-top: 3vw;
+    backdrop-filter: blur(23px);
+    -webkit-backdrop-filter: blur(23px) ;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw;
-    /* border: 1px solid white; */
+    padding: 3vw 3vw 0vw 3vw;
 }
 
 .playAgainButton{
-    padding: 1vw 1.5vw; 
-    color: var(--brown);
-    font-size: 2vw;
+    background: #5E5DF0;
     font-family: 'Ysabeau Infant', sans-serif;
-    font-weight: bolder;
-    border-radius: 5px;
-    transition: all 0.2s linear; 
-    border-color: transparent;
-}
-
-.playAgainButton:hover{
-    background: var(--brown);
-    color: white;
-    border: 2px solid white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.418);
-}
-
-.findNumber{
-    font-size: 3.4vw;
-    font-family: 'Ysabeau Infant', sans-serif;
-    font-weight: bolder;
+    border-radius: 999px;
+    box-shadow: #4b4bf4 0 10px 20px -10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.6vw;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 1.5vw 3vw;
+    user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: keep-all;
+    border: 0;
 }
 
 .guess{
@@ -61,23 +85,21 @@ body{
     font-size: 4vw;
     font-family: 'Ysabeau Infant', sans-serif;
     font-weight: bold;
-    border-top: 0.2vw solid white;
-    border-bottom: 0.2vw solid white;
-    /* width: 40vw; */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.607);
     margin: auto;
     padding: 1vw 0px;
+    color: white;
 }
 
 .givenNumber{
     font-size: 6vw;
-    border: 1px solid white;
-    width: 200px;
+    filter: drop-shadow( 2px 2px 5px rgb(255, 0, 0));
+    width: 20vw;
     margin: 2vw auto;
     text-align: center;
-    padding: 23px 0px;
-    background-color: white;
-    color: var(--brown);
+    padding: 2.3vw 0px;
     transition: all 0.2s linear;
+    border: 1px solid white; 
 }
 
 .givenNumber:hover{
@@ -90,36 +112,30 @@ body{
 
 .footer{
     padding: 2vw 3vw;
-    /* border: 1px solid white; */
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.inputField{
-    /* border: 1PX SOLID WHITE; */
-    /* padding: 10px;  */
-}
-
 input{
     text-align: center;
-    font-size: 32px;
-    width: 183px;
+    font-size: 3.2vw;
+    width: 18vw;
     color: var(--brown);
 }
 
 .checkButton{
-    width: 186px;
-    padding: 5px 0px;
-    margin-top: 10px;
-    color: var(--brown);
-    font-size: large;
+    background: #5E5DF0;
     font-family: 'Ysabeau Infant', sans-serif;
-    font-weight: bolder;
-    border-radius: 5px;
-    border: 2px solid white;
-    transition: all 0.2s linear;
+    box-shadow: #4b4bf4 0 10px 20px -10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.6vw;
+    padding: 1.5vw 3vw;
+    margin: 5px 0px;
+    border: none;
+    width: 18vw; 
 }
 
 .checkButton:hover{
@@ -132,6 +148,7 @@ input{
 .content{
     padding: 10px;
     text-align: center;
+    color: red;
 }
 
 .content>h3{
@@ -147,7 +164,21 @@ input{
     font-size: 1.8vw;
 }
 
-@media screen and (min-width:250px) and (max-width:415px){
+@media screen and (max-width: 600px){
+    /* body{
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    } */
+
+    .findNumber{
+        font-size: 8vw;
+    }
+
+    .playAgainButton {
+        font-size: 4vw;
+    }
+}
+
+/* @media screen and (min-width:250px) and (max-width:415px){
     .footer{
         flex-direction: column-reverse;
         margin: auto;
@@ -163,4 +194,4 @@ input{
         margin-inline: auto;
         width: 68vw;
     }
-}
+} */

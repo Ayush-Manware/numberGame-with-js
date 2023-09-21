@@ -28,7 +28,6 @@ function check() {
       document.getElementsByTagName("h3")[0].innerHTML =
         "You Found The Number";
         document.getElementById("$givenNumber").innerHTML = randomNumber;
-        document.body.style.backgroundColor = "green"
         document.getElementById('$checkButton').style.display = 'none';
     }
   }
@@ -55,28 +54,6 @@ function playAgain(){
 
   location.reload();
 
-  //  let a = document.getElementById('questionMark').innerHTML = '?';
-  //  console.log(a);
-  // let randomNumber = Math.trunc(Math.random()*100 + 1);
-  // console.log(randomNumber)
-
-
-  // document.getElementById("$givenNumber").innerHTML = randomNumber;
-  // document.getElementById("$givenNumber").innerHTML = '?';
-
-  // document.getElementById('$input').value = null;
-
-  // document.getElementsByTagName('h3')[0].innerHTML = 'Start Guessing Again';
-  
-  // let chance = 100;
-  // document.getElementById('chanceSpan').innerHTML = chance;
-
-  // document.body.style.backgroundColor = "rgb(79, 16, 16)";
-
-  // document.getElementById('$checkButton').style.display = 'block';
-  
-
-  // if(randomNumber > )    
 
 
 
