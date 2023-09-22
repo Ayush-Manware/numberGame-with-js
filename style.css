@@ -35,7 +35,7 @@ body{
 
 .main{
     color: white;
-    height: 100vh;
+    height: 122vh;
     background-image: url("./eyestetix-studio-m0EzHtexapU-unsplash.jpg");
     font-family: 'Ysabeau Infant', sans-serif;
     background-position: left;
@@ -44,6 +44,7 @@ body{
 
 .container{
     width: 70vw;
+    height: 90vh;
     border: 1px solid rgb(0, 0, 0);
     margin: auto;
     margin-top: 3vw;
@@ -139,7 +140,6 @@ input{
 }
 
 .checkButton:hover{
-    background: var(--brown);
     color: white;
     border: 2px solid white;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.764);
@@ -164,17 +164,89 @@ input{
     font-size: 1.8vw;
 }
 
+.success h1{
+    color: greenyellow; 
+    text-align: center;
+    filter: drop-shadow(2px 3px 10px greenyellow);
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 @media screen and (max-width: 600px){
-    /* body{
-        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-    } */
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main{
+        padding: 2vw;
+        width: 100vw;
+    }
 
     .findNumber{
-        font-size: 8vw;
+        font-size: 4vw;
     }
 
     .playAgainButton {
         font-size: 4vw;
+        padding: 3.5vw 6vw;
+    }
+
+    .kingIcon{
+        width: 15vw;
+    }
+
+    .container{
+        width: 90vw;
+        height: 100vw;
+        margin-top: 15vw;
+    }
+
+    .guess{
+        font-size: 8vw;
+        padding: 5vw 0vw;
+    }
+
+    .givenNumber{
+        border: 1px solid red;
+        width: 40vw;
+        font-size: 15vw;
+    }
+
+    .footer{
+        /* border: 1px solid red; */
+        flex-direction: column-reverse;
+    }
+
+    .content>h3{
+        font-size: 6vw;
+    }
+
+    .chances{
+        font-size: 6vw;
+    }
+
+    .highScore{
+        font-size: 5vw;
+    }
+
+    input{
+        width: 55vw;
+        font-size: 8vw;
+        padding: 2vw;
+    }
+
+    .checkButton{
+        box-shadow: #4b4bf4 0 10px 45px -10px;
+        width: 60vw;
+        font-size: 6vw;
     }
 }
 

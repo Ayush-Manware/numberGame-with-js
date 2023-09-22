@@ -9,7 +9,7 @@ let randomNumber = (document.getElementById("$givenNumber").innerHTML =
   console.log(randomNumber);
 
 let questionMark = document.getElementById("$givenNumber").innerHTML = '?';
-document.getElementById('chanceSpan').innerHTML = 100;
+// document.getElementById('chanceSpan').innerHTML = 100;
 let chance = 99;
 let highScore = null;
 
@@ -36,19 +36,25 @@ function check() {
   }
 
  
-  let displayChance = document.getElementById('chanceSpan').innerHTML = chance
-
+  // let displayChance = document.getElementById('chanceSpan').style.display = "none"
+  
   if(inputNumber !== randomNumber){
     chance--;
    }
  
    if(inputNumber === randomNumber){
-    let highScoreDisplay = document.getElementById('highScoreSpan').innerHTML = chance;
+    // let highScoreDisplay = document.getElementById('highScoreSpan').innerHTML = chance;
+    // success.classList.add("show")
+    // success.classList.remove("hide")
+    var success = document.getElementById("$success")
+    success.classList.remove("hide")
    }
-
 }
 
-
+function handleInput(){
+  var input = document.getElementById("$input")
+  input.innerHTML = "Start Guessing"
+}
 
 function playAgain(){
 

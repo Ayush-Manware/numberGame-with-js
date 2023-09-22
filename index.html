@@ -23,7 +23,7 @@
       </div>
 
       <div class="container">
-        <h2 class="guess" id="$guess">Guess My Number !</h2>
+        <h2 class="guess" id="$guess">Guess The Number !</h2>
 
         <div class="givenNumber" id="$givenNumber">
           <p class="questionMark" id="$questionMark">?</p>
@@ -38,6 +38,7 @@
               value=""
               placeholder="00"
               title="Use Arrow Key to Increase Or Decrease Number"
+              onchange="handleInput()"
             />
             <br />
             <button class="checkButton" id="$checkButton" onclick="check()">
@@ -46,14 +47,18 @@
           </div>
           <div class="content" id="$content">
             <h3>Start Guessing...</h3>
-            <p id="$chances" class="chances">
+            <!-- <p id="$chances" class="chances">
               Chances: <span id="chanceSpan"></span>
-            </p>
-            <p id="$highScore" class="highScore">
+            </p> -->
+            <!-- <p id="$highScore" class="highScore">
               HighScore: <span id="highScoreSpan">00</span>
-            </p>
+            </p> -->
+          </div>
+          <div class="success hide" id="$success">
+            <h1>Congratulations !!</h1>
           </div>
         </div>
+        
       </div>
     </div>
     <script src="./script.js"></script>
