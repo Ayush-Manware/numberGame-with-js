@@ -1,8 +1,15 @@
-let randomNumber = (document.getElementById("$givenNumber").innerHTML =
-Math.trunc(Math.random() * 100 + 1));
+var randomNumber = (document.getElementById("$givenNumber").innerHTML =
+  Math.trunc(Math.random() * 100 + 1));
 console.log(randomNumber);
 
-let questionMark = (document.getElementById("$givenNumber").innerHTML = "?");
+// let hint = document.getElementById("hintPara");
+// if (randomNumber % 2 === 0) {
+//   hint.innerHTML = "The Number Is Even";
+// } else if (randomNumber % 2 === !0) {
+//   hint.innerHTML = "The Number Is Odd";
+// }
+
+let questionMark = (document.getElementById("$givenNumber").innerHTML = " ? ");
 let chance = 99;
 let highScore = null;
 
@@ -15,21 +22,18 @@ function check() {
       document.getElementsByTagName("h3")[0].innerHTML =
         "Your Number was Higher, the Number was :" + randomNumber;
       document.getElementsByTagName("h3")[0].classList.add("red");
-    } 
-    else if (inputNumber < randomNumber) {
+    } else if (inputNumber < randomNumber) {
       document.getElementsByTagName("h3")[0].innerHTML =
         "Your Number was lower, the Number was :" + randomNumber;
       document.getElementsByTagName("h3")[0].classList.add("red");
-    } 
-    else if (inputNumber === randomNumber) {
+    } else if (inputNumber === randomNumber) {
       document.getElementsByTagName("h3")[0].innerHTML = "You Found The Number";
       document.getElementById("$givenNumber").innerHTML = randomNumber;
       document.getElementById("$checkButton").style.display = "none";
 
       document.getElementsByTagName("h3")[0].classList.add("green");
     }
-  } 
-  else {
+  } else {
     document.getElementsByTagName("h3")[0].innerHTML = "Invalid Input";
   }
 

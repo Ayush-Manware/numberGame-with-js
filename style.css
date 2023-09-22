@@ -194,6 +194,19 @@ input {
   display: block;
 }
 
+.hint{
+    height: 20px;
+    margin-top: 2vw;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    /* display: flex; */
+    justify-content: end;
+}
+
+
 @media screen and (max-width: 600px) {
   body {
     display: flex;
@@ -222,7 +235,7 @@ input {
   .container {
     width: 90vw;
     height: 105vw;
-    margin-top: 15vw;
+    /* margin-top: 15vw; */
   }
 
   .guess {
