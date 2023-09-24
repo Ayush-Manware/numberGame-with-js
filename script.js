@@ -64,7 +64,7 @@ function playAgain() {
   location.reload();
 }
  
-let count = 0;
+let count = 00;
 var main = document.getElementById("$main");
 
 function deposit(){
@@ -88,9 +88,25 @@ function deposit(){
   moneyInput.setAttribute("type","number")
   addMoney.appendChild(moneyInput)
 
+  // var currentBalance = document.getElementById("$balanceCount").innerHTML = count
   var addButton = document.createElement("Button")
   addButton.innerHTML = "Add Money"
   addButton.setAttribute("class","addButton")
   addButton.setAttribute("id","$addButton")
   addMoney.appendChild(addButton)
+  addButton.addEventListener("click",()=>{
+    let moneyInput = document.getElementById("$moneyInput").value
+    let balanceCount = document.getElementById("$balanceCount")
+    balanceCount.innerHTML = count + parseInt(moneyInput);
+    main.removeChild(blurDiv)
+  })
+
+  var cancelButton = document.createElement("button")
+  cancelButton.innerHTML = "Cancel"
+  cancelButton.setAttribute("id","$cancelButton")
+  cancelButton.setAttribute("class","cancelButton")
+  addMoney.appendChild(cancelButton)
+  cancelButton.addEventListener("click",()=>{
+    main.removeChild(blurDiv)
+  })
 }
