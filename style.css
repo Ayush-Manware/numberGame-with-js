@@ -10,6 +10,7 @@
   --blue: #5e5df0;
   --Textwhite: white;
   --borderWhite: white;
+  --blurGray : rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -36,10 +37,10 @@ body {
 
 .main {
   color: var(--Textwhite);
-  height: 122vh;
+  height: 100vh;
   background-image: url("./eyestetix-studio-m0EzHtexapU-unsplash.jpg");
   font-family: "Ysabeau Infant", sans-serif;
-  background-position: left;
+  background-position: center;
   background-size: cover;
 }
 
@@ -51,7 +52,7 @@ body {
   margin-top: 3vw;
   backdrop-filter: blur(23px);
   -webkit-backdrop-filter: blur(23px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--blurGray);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
@@ -312,8 +313,9 @@ input {
 
   .moneyDiv{
     border: 1px solid var(--borderWhite); 
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
+    background-color: var(--blurGray);
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
   }
 
   .buttonDiv{
@@ -359,6 +361,7 @@ input {
     width: 90vw;
     backdrop-filter: blur(10px);
     border-radius: 5px;
+    text-align: center;
   }
 
   .moneyInput{

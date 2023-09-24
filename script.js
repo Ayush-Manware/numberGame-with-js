@@ -63,50 +63,69 @@ function handleInput() {
 function playAgain() {
   location.reload();
 }
- 
+
 let count = 00;
 var main = document.getElementById("$main");
+var isOpen = false;
 
-function deposit(){
+function deposit() {
 
-  var blurDiv = document.createElement("div")
-  blurDiv.setAttribute("class","blurDiv")
-  main.appendChild(blurDiv)
+  if (!isOpen) {
+    isOpen = true;
+    var blurDiv = document.createElement("div");
+    blurDiv.setAttribute("class", "blurDiv");
+    main.appendChild(blurDiv);
 
-  var addMoney = document.createElement("div") 
-  addMoney.setAttribute("class", "addMoney")
-  blurDiv.appendChild(addMoney)
+    var addMoney = document.createElement("div");
+    addMoney.setAttribute("class", "addMoney");
+    blurDiv.appendChild(addMoney);
 
-  var moneyHeading = document.createElement("h1")
-  moneyHeading.setAttribute("class", "moneyHeading")
-  moneyHeading.innerHTML = "Deposit"
-  addMoney.appendChild(moneyHeading)
+    var moneyHeading = document.createElement("h1");
+    moneyHeading.setAttribute("class", "moneyHeading");
+    moneyHeading.innerHTML = "Deposit";
+    addMoney.appendChild(moneyHeading);
 
-  var moneyInput = document.createElement("input")
-  moneyInput.setAttribute("class", "moneyInput")
-  moneyInput.setAttribute("id","$moneyInput")
-  moneyInput.setAttribute("type","number")
-  addMoney.appendChild(moneyInput)
+    var minimumAmount = document.createElement("p")
+    minimumAmount.innerHTML = "Minimum deposit amount is Rs. 200!!"
+    minimumAmount.setAttribute("class","minimumAmount")
+    addMoney.appendChild(minimumAmount)
 
-  // var currentBalance = document.getElementById("$balanceCount").innerHTML = count
-  var addButton = document.createElement("Button")
-  addButton.innerHTML = "Add Money"
-  addButton.setAttribute("class","addButton")
-  addButton.setAttribute("id","$addButton")
-  addMoney.appendChild(addButton)
-  addButton.addEventListener("click",()=>{
-    let moneyInput = document.getElementById("$moneyInput").value
-    let balanceCount = document.getElementById("$balanceCount")
-    balanceCount.innerHTML = count + parseInt(moneyInput);
-    main.removeChild(blurDiv)
-  })
+    var moneyInput = document.createElement("input");
+    moneyInput.setAttribute("class", "moneyInput");
+    moneyInput.setAttribute("id", "$moneyInput");
+    moneyInput.setAttribute("type", "number");
+    addMoney.appendChild(moneyInput);
 
-  var cancelButton = document.createElement("button")
-  cancelButton.innerHTML = "Cancel"
-  cancelButton.setAttribute("id","$cancelButton")
-  cancelButton.setAttribute("class","cancelButton")
-  addMoney.appendChild(cancelButton)
-  cancelButton.addEventListener("click",()=>{
-    main.removeChild(blurDiv)
-  })
+    // var currentBalance = document.getElementById("$balanceCount").innerHTML = count
+    var addButton = document.createElement("Button");
+    addButton.innerHTML = "Add Money";
+    addButton.setAttribute("class", "addButton");
+    addButton.setAttribute("id", "$addButton");
+    addMoney.appendChild(addButton);
+    addButton.addEventListener("click", () => {
+      let moneyInput = document.getElementById("$moneyInput").value;
+      let balanceCount = document.getElementById("$balanceCount");
+      if(moneyInput >= 200){
+      let newBalance = count += parseInt(moneyInput);
+      balanceCount.innerHTML = newBalance }
+      else{
+        alert("Minimum Amout is 200")
+      }
+      isOpen = false
+      main.removeChild(blurDiv);
+    });
+
+    var cancelButton = document.createElement("button");
+    cancelButton.innerHTML = "Cancel";
+    cancelButton.setAttribute("id", "$cancelButton");
+    cancelButton.setAttribute("class", "cancelButton");
+    addMoney.appendChild(cancelButton);
+    cancelButton.addEventListener("click", () => {
+      isOpen = false
+      main.removeChild(blurDiv);
+    });
+  } 
+  else {
+    return null;
+  }
 }
