@@ -307,7 +307,6 @@ input {
 
   .currentBalance{
     font-size: 6vw;
-    /* border: 1px solid rgb(255, 255, 255);  */
     padding: 5vw;
   }
 
@@ -334,6 +333,7 @@ input {
     border-color: transparent;
     font-size: 5vw;
     letter-spacing: 2px;
+    font-family: "Ysabeau Infant", sans-serif;
   }
 
   .deposit{
@@ -341,26 +341,44 @@ input {
     padding: 4vw;
     background-color: var(--blue);
     color: var(--Textwhite);
-    border-color: transparent;
     font-size: 5vw;
     letter-spacing: 2px;
+    font-family: "Ysabeau Infant", sans-serif;
+  }
+
+  .blurDiv{
+    background-color: red;
+  }
+
+  .addMoney{
+    border: 1px solid var(--borderWhite);
+    padding: 2vw;
+    position: absolute;
+    top: 75vw;
+    left: 3vw;
+    width: 90vw;
+    height: 50VW;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+  }
+
+  .moneyInput{
+    width: 95%;
+    margin: 3vw auto;
+  }
+
+  .moneyHeading{
+    text-align: center;
+  }
+
+  .addButton{
+    width: 100%;
+    padding: 2.5vw;
+    font-size: 6vw; 
+    background-color: var(--blue);
+    color: var(--Textwhite);
+    border-color: transparent;
   }
 }
 
-/* @media screen and (min-width:250px) and (max-width:415px){
-    .footer{
-        flex-direction: column-reverse;
-        margin: auto;
-    }
 
-    input{
-        margin-top: 10px;
-        margin-inline: auto;
-        width: 67vw;
-    }
-
-    .checkButton{
-        margin-inline: auto;
-        width: 68vw;
-    }
-} */

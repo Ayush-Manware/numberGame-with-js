@@ -63,3 +63,34 @@ function handleInput() {
 function playAgain() {
   location.reload();
 }
+ 
+let count = 0;
+var main = document.getElementById("$main");
+
+function deposit(){
+
+  var blurDiv = document.createElement("div")
+  blurDiv.setAttribute("class","blurDiv")
+  main.appendChild(blurDiv)
+
+  var addMoney = document.createElement("div") 
+  addMoney.setAttribute("class", "addMoney")
+  blurDiv.appendChild(addMoney)
+
+  var moneyHeading = document.createElement("h1")
+  moneyHeading.setAttribute("class", "moneyHeading")
+  moneyHeading.innerHTML = "Deposit"
+  addMoney.appendChild(moneyHeading)
+
+  var moneyInput = document.createElement("input")
+  moneyInput.setAttribute("class", "moneyInput")
+  moneyInput.setAttribute("id","$moneyInput")
+  moneyInput.setAttribute("type","number")
+  addMoney.appendChild(moneyInput)
+
+  var addButton = document.createElement("Button")
+  addButton.innerHTML = "Add Money"
+  addButton.setAttribute("class","addButton")
+  addButton.setAttribute("id","$addButton")
+  addMoney.appendChild(addButton)
+}
