@@ -391,16 +391,18 @@ input {
     backdrop-filter: blur(10px);
     border-radius: 5px;
     text-align: center;
+    box-shadow: 5px 5px 10px var(--blurGray);
   }
 
   .blurDiv{
+    color: var(--Textwhite);
     position: absolute;
     top: 0px; 
     left: 0px;
     background-color:var(--blurGray);
-    backdrop-filter: blur(23px);
+    backdrop-filter: blur(8px);
     width: 100vw;
-    height: 215vw;
+    height: 140%;
   }
 
   .moneyInput{
