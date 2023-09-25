@@ -69,7 +69,6 @@ var main = document.getElementById("$main");
 var isOpen = false;
 
 function deposit() {
-
   if (!isOpen) {
     isOpen = true;
     var blurDiv = document.createElement("div");
@@ -85,10 +84,10 @@ function deposit() {
     moneyHeading.innerHTML = "Deposit";
     addMoney.appendChild(moneyHeading);
 
-    var minimumAmount = document.createElement("p")
-    minimumAmount.innerHTML = "Minimum deposit amount is Rs. 200!!"
-    minimumAmount.setAttribute("class","minimumAmount")
-    addMoney.appendChild(minimumAmount)
+    var minimumAmount = document.createElement("p");
+    minimumAmount.innerHTML = "Minimum deposit amount is Rs. 200!!";
+    minimumAmount.setAttribute("class", "minimumAmount");
+    addMoney.appendChild(minimumAmount);
 
     var moneyInput = document.createElement("input");
     moneyInput.setAttribute("class", "moneyInput");
@@ -105,13 +104,13 @@ function deposit() {
     addButton.addEventListener("click", () => {
       let moneyInput = document.getElementById("$moneyInput").value;
       let balanceCount = document.getElementById("$balanceCount");
-      if(moneyInput >= 200){
-      let newBalance = count += parseInt(moneyInput);
-      balanceCount.innerHTML = newBalance }
-      else{
-        alert("Minimum Amout is 200")
+      if (moneyInput >= 200) {
+        let newBalance = (count += parseInt(moneyInput));
+        balanceCount.innerHTML = newBalance;
+      } else {
+        alert("Minimum Amout is 200");
       }
-      isOpen = false
+      isOpen = false;
       main.removeChild(blurDiv);
     });
 
@@ -121,11 +120,66 @@ function deposit() {
     cancelButton.setAttribute("class", "cancelButton");
     addMoney.appendChild(cancelButton);
     cancelButton.addEventListener("click", () => {
-      isOpen = false
+      isOpen = false;
       main.removeChild(blurDiv);
     });
-  } 
-  else {
+  } else {
     return null;
   }
+}
+
+let currentBet= 0;
+
+function ten() {
+  const totalBet = document.getElementById("$totalBet");
+  var tenBet = currentBet += 10
+  totalBet.innerHTML = tenBet
+}
+
+function fifty() {
+  const totalBet = document.getElementById("$totalBet");
+  var fiftyBet = currentBet += 50
+  totalBet.innerHTML = fiftyBet
+}
+
+function hundred(){
+  const totalBet = document.getElementById("$totalBet");
+  var hundredBet = currentBet += 100
+  totalBet.innerHTML = hundredBet
+}
+
+function fiveHundred(){
+  const totalBet = document.getElementById("$totalBet");
+  var fiveHundred = currentBet += 500
+  totalBet.innerHTML = fiveHundred
+}
+
+function thousand(){
+  const totalBet = document.getElementById("$totalBet");
+  var thousand = currentBet += 1000
+  totalBet.innerHTML = thousand
+}
+
+function fiveThousand(){
+  const totalBet = document.getElementById("$totalBet");
+  var fiveThousand = currentBet += 5000
+  totalBet.innerHTML = fiveThousand;
+}
+
+function tenThousand(){
+  const totalBet = document.getElementById("$totalBet");
+  var tenThousand = currentBet += 10000
+  totalBet.innerHTML = tenThousand
+}
+
+function fiftyThousand(){
+  const totalBet = document.getElementById("$totalBet");
+  var fiftyThousand = currentBet += 50000
+  totalBet.innerHTML = fiftyThousand
+}
+
+function oneLakh(){
+  const totalBet = document.getElementById("$totalBet");
+  var oneLakh = currentBet += 100000
+  totalBet.innerHTML = oneLakh
 }
