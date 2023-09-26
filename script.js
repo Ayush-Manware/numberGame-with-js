@@ -1,5 +1,5 @@
 var randomNumber = (document.getElementById("$givenNumber").innerHTML =
-  Math.trunc(Math.random() * 100 + 1));
+Math.trunc(Math.random() * 100 + 1));
 console.log(randomNumber);
 
 // let hint = document.getElementById("hintPara");
@@ -9,9 +9,8 @@ console.log(randomNumber);
 //   hint.innerHTML = "The Number Is Odd";
 // }
 
-let questionMark = (document.getElementById("$givenNumber").innerHTML = " ? ");
-let chance = 99;
-let highScore = null;
+let questionMark = (document.getElementById("$givenNumber").innerHTML =
+  " 1 - 100 ");
 
 function check() {
   var inputNumber = document.querySelector("input").value;
@@ -46,6 +45,7 @@ function check() {
     document.getElementsByTagName("h3")[0].classList.add("green");
     var success = document.getElementById("$success");
     success.classList.remove("hide");
+    // randomNumber.classList.add("red");
     setTimeout(() => {
       location.reload();
     }, 2000);
@@ -61,7 +61,7 @@ function handleInput() {
 }
 
 function playAgain() {
-  location.reload();
+  location.reload(false);
 }
 
 let count = 00;
@@ -97,7 +97,6 @@ function deposit() {
     moneyInput.setAttribute("type", "number");
     addMoney.appendChild(moneyInput);
 
-    // var currentBalance = document.getElementById("$balanceCount").innerHTML = count
     var addButton = document.createElement("Button");
     addButton.innerHTML = "Add Money";
     addButton.setAttribute("class", "addButton");
@@ -105,13 +104,17 @@ function deposit() {
     addMoney.appendChild(addButton);
     addButton.addEventListener("click", () => {
       let moneyInput = document.getElementById("$moneyInput").value;
-      
+
       if (moneyInput >= 200) {
         let newBalance = (count += parseInt(moneyInput));
-        balanceCount.innerHTML = newBalance;
+        localStorage.setItem("depositAmount", newBalance);
+        let getStore = localStorage.getItem("depositAmount");
+        balanceCount.innerHTML = getStore
       } else {
         alert("Minimum Amout is 200");
       }
+      var getStore = localStorage.getItem("depositAmount");
+      balanceCount.innerHTML = getStore
       isOpen = false;
       main.removeChild(blurDiv);
     });
@@ -134,107 +137,98 @@ let currentBet = 0;
 function ten() {
   const totalBet = document.getElementById("$totalBet");
   var tenBet = (currentBet += 10);
-  if ( balanceCount.innerHTML >= 10) {
+  if (balanceCount.innerHTML >= 10) {
     totalBet.innerHTML = tenBet;
-    balanceCount.innerHTML -= 10; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 10;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function fifty() {
   const totalBet = document.getElementById("$totalBet");
   var fiftyBet = (currentBet += 50);
-  if ( balanceCount.innerHTML >= 50) {
+  if (balanceCount.innerHTML >= 50) {
     totalBet.innerHTML = fiftyBet;
-    balanceCount.innerHTML -= 50; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 50;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function hundred() {
   const totalBet = document.getElementById("$totalBet");
   var hundredBet = (currentBet += 100);
-  if ( balanceCount.innerHTML >= 100) {
+  if (balanceCount.innerHTML >= 100) {
     totalBet.innerHTML = hundredBet;
-    balanceCount.innerHTML -= 100; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 100;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function fiveHundred() {
   const totalBet = document.getElementById("$totalBet");
   var fiveHundred = (currentBet += 500);
-  if ( balanceCount.innerHTML >= 500) {
+  if (balanceCount.innerHTML >= 500) {
     totalBet.innerHTML = fiveHundred;
-    balanceCount.innerHTML -= 500; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 500;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function thousand() {
   const totalBet = document.getElementById("$totalBet");
   var thousand = (currentBet += 1000);
-  if ( balanceCount.innerHTML >= 1000) {
+  if (balanceCount.innerHTML >= 1000) {
     totalBet.innerHTML = thousand;
-    balanceCount.innerHTML -= 1000; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 1000;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function fiveThousand() {
   const totalBet = document.getElementById("$totalBet");
   var fiveThousand = (currentBet += 5000);
-  if ( balanceCount.innerHTML >= 5000) {
+  if (balanceCount.innerHTML >= 5000) {
     totalBet.innerHTML = fiveThousand;
-    balanceCount.innerHTML -= 5000; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 5000;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function tenThousand() {
   const totalBet = document.getElementById("$totalBet");
   var tenThousand = (currentBet += 10000);
-  if ( balanceCount.innerHTML >= 10000) {
+  if (balanceCount.innerHTML >= 10000) {
     totalBet.innerHTML = tenThousand;
-    balanceCount.innerHTML -= 10000; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 10000;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function fiftyThousand() {
   const totalBet = document.getElementById("$totalBet");
   var fiftyThousand = (currentBet += 50000);
-  if ( balanceCount.innerHTML >= 50000) {
+  if (balanceCount.innerHTML >= 50000) {
     totalBet.innerHTML = fiftyThousand;
-    balanceCount.innerHTML -= 50000; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 50000;
+  } else {
+    alert("Insufficiant Funds");
   }
 }
 
 function oneLakh() {
   const totalBet = document.getElementById("$totalBet");
   var oneLakh = (currentBet += 100000);
-  if ( balanceCount.innerHTML >= 100000) {
+  if (balanceCount.innerHTML >= 100000) {
     totalBet.innerHTML = oneLakh;
-    balanceCount.innerHTML -= 100000; 
-  }
-  else{
-    alert("Insufficiant Funds")
+    balanceCount.innerHTML -= 100000;
+  } else {
+    alert("Insufficiant Funds");
   }
 }

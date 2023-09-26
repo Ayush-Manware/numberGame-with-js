@@ -6,6 +6,11 @@
   padding: 0px;
 }
 
+/* html{
+  height: 100%;
+  border: 1px solid red;
+} */
+
 :root {
   --blue: #5e5df0;
   --Textwhite: white;
@@ -91,6 +96,8 @@ body {
   margin: auto;
   padding: 1vw 0px;
   color: var(--Textwhite);
+  background-color: var(--blurGray);
+  backdrop-filter: blur(20px);
 }
 
 .givenNumber {
@@ -128,7 +135,7 @@ body {
 }
 
 .footer {
-  padding: 2vw 3vw;
+  padding: 0vw 3vw;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
@@ -178,6 +185,10 @@ input {
 
 .highScore {
   font-size: 1.8vw;
+}
+
+.success{
+  margin: 5vw auto;
 }
 
 .success h1 {
@@ -276,7 +287,7 @@ input {
   }
 
   .givenNumber {
-    width: 40vw;
+    width: 60vw;
     font-size: 15vw;
     margin-top: 6.5vw;
   }
@@ -284,15 +295,17 @@ input {
   .green {
     filter: drop-shadow(2px 2px 5px greenyellow);
     color: greenyellow;
-    width: 40vw;
+    width: 60vw;
     font-size: 15vw;
+    border-color: greenyellow;
   }
 
   .red {
     filter: drop-shadow(2px 2px 5px red);
     color: red;
-    width: 40vw;
+    width: 60vw;
     font-size: 15vw;
+    border-color: red;
   }
 
   .footer {
@@ -300,9 +313,10 @@ input {
   }
 
   .content > h3 {
-    font-size: 4vw;
+    font-size: 5vw;
     width: 100%;
     color: var(--Textwhite);
+    filter: none;
   }
 
   .content {
