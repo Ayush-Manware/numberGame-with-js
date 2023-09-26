@@ -68,6 +68,8 @@ let count = 00;
 var main = document.getElementById("$main");
 var isOpen = false;
 
+let balanceCount = document.getElementById("$balanceCount");
+
 function deposit() {
   if (!isOpen) {
     isOpen = true;
@@ -103,7 +105,7 @@ function deposit() {
     addMoney.appendChild(addButton);
     addButton.addEventListener("click", () => {
       let moneyInput = document.getElementById("$moneyInput").value;
-      let balanceCount = document.getElementById("$balanceCount");
+      
       if (moneyInput >= 200) {
         let newBalance = (count += parseInt(moneyInput));
         balanceCount.innerHTML = newBalance;
@@ -128,58 +130,111 @@ function deposit() {
   }
 }
 
-let currentBet= 0;
-
+let currentBet = 0;
 function ten() {
   const totalBet = document.getElementById("$totalBet");
-  var tenBet = currentBet += 10
-  totalBet.innerHTML = tenBet
+  var tenBet = (currentBet += 10);
+  if ( balanceCount.innerHTML >= 10) {
+    totalBet.innerHTML = tenBet;
+    balanceCount.innerHTML -= 10; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
 function fifty() {
   const totalBet = document.getElementById("$totalBet");
-  var fiftyBet = currentBet += 50
-  totalBet.innerHTML = fiftyBet
+  var fiftyBet = (currentBet += 50);
+  if ( balanceCount.innerHTML >= 50) {
+    totalBet.innerHTML = fiftyBet;
+    balanceCount.innerHTML -= 50; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function hundred(){
+function hundred() {
   const totalBet = document.getElementById("$totalBet");
-  var hundredBet = currentBet += 100
-  totalBet.innerHTML = hundredBet
+  var hundredBet = (currentBet += 100);
+  if ( balanceCount.innerHTML >= 100) {
+    totalBet.innerHTML = hundredBet;
+    balanceCount.innerHTML -= 100; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function fiveHundred(){
+function fiveHundred() {
   const totalBet = document.getElementById("$totalBet");
-  var fiveHundred = currentBet += 500
-  totalBet.innerHTML = fiveHundred
+  var fiveHundred = (currentBet += 500);
+  if ( balanceCount.innerHTML >= 500) {
+    totalBet.innerHTML = fiveHundred;
+    balanceCount.innerHTML -= 500; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function thousand(){
+function thousand() {
   const totalBet = document.getElementById("$totalBet");
-  var thousand = currentBet += 1000
-  totalBet.innerHTML = thousand
+  var thousand = (currentBet += 1000);
+  if ( balanceCount.innerHTML >= 1000) {
+    totalBet.innerHTML = thousand;
+    balanceCount.innerHTML -= 1000; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function fiveThousand(){
+function fiveThousand() {
   const totalBet = document.getElementById("$totalBet");
-  var fiveThousand = currentBet += 5000
-  totalBet.innerHTML = fiveThousand;
+  var fiveThousand = (currentBet += 5000);
+  if ( balanceCount.innerHTML >= 5000) {
+    totalBet.innerHTML = fiveThousand;
+    balanceCount.innerHTML -= 5000; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function tenThousand(){
+function tenThousand() {
   const totalBet = document.getElementById("$totalBet");
-  var tenThousand = currentBet += 10000
-  totalBet.innerHTML = tenThousand
+  var tenThousand = (currentBet += 10000);
+  if ( balanceCount.innerHTML >= 10000) {
+    totalBet.innerHTML = tenThousand;
+    balanceCount.innerHTML -= 10000; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function fiftyThousand(){
+function fiftyThousand() {
   const totalBet = document.getElementById("$totalBet");
-  var fiftyThousand = currentBet += 50000
-  totalBet.innerHTML = fiftyThousand
+  var fiftyThousand = (currentBet += 50000);
+  if ( balanceCount.innerHTML >= 50000) {
+    totalBet.innerHTML = fiftyThousand;
+    balanceCount.innerHTML -= 50000; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
 
-function oneLakh(){
+function oneLakh() {
   const totalBet = document.getElementById("$totalBet");
-  var oneLakh = currentBet += 100000
-  totalBet.innerHTML = oneLakh
+  var oneLakh = (currentBet += 100000);
+  if ( balanceCount.innerHTML >= 100000) {
+    totalBet.innerHTML = oneLakh;
+    balanceCount.innerHTML -= 100000; 
+  }
+  else{
+    alert("Insufficiant Funds")
+  }
 }
