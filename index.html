@@ -28,11 +28,11 @@
         </div>
       </div>
 
-        <!-- hint ///////////////// -->
-        <div class="hint" id="$hint">
-          <p id="hintIcon" class="hintIcon"><i class="fa-solid fa-info"></i></p>
-          <p class="hintPara" id="$hintPara"></p>
-        </div>
+      <!-- hint ///////////////// -->
+      <div class="hint" id="$hint">
+        <p id="hintIcon" class="hintIcon"><i class="fa-solid fa-info"></i></p>
+        <p class="hintPara" id="$hintPara"></p>
+      </div>
 
       <!-- Container /////////// -->
       <div class="container">
@@ -43,6 +43,9 @@
         </div>
 
         <div class="footer">
+          <div class="content" id="$content">
+            <h3>Start Guessing...</h3>
+          </div>
           <div class="inputField" id="$inputField">
             <input
               type="number"
@@ -58,15 +61,7 @@
               Check Number
             </button>
           </div>
-          <div class="content" id="$content">
-            <h3>Start Guessing...</h3>
-            <!-- <p id="$chances" class="chances">
-              Chances: <span id="chanceSpan"></span>
-            </p> -->
-            <!-- <p id="$highScore" class="highScore">
-              HighScore: <span id="highScoreSpan">00</span>
-            </p> -->
-          </div>
+
           <div class="success hide" id="$success">
             <h1>Congratulations !!</h1>
           </div>
@@ -74,12 +69,9 @@
       </div>
 
       <!-- Bet Amount ///////////////// -->
-      
-
-       
 
       <!-- BET /////// -->
-      
+
       <div class="bet" id="$bet">
         <div class="betAmount" id="$betAmount">
           <h1>Your Bet : <span id="$totalBet"> 00 </span></h1>
@@ -91,11 +83,11 @@
         <div class="oneThousand betCommon" onclick="thousand()">1000</div>
         <div class="fiveThousand betCommon" onclick="fiveThousand()">5000</div>
         <div class="tenThousand betCommon" onclick="tenThousand()">10,000</div>
-        <div class="fiftyThousand betCommon" onclick="fiftyThousand()">50,000</div>
+        <div class="fiftyThousand betCommon" onclick="fiftyThousand()">
+          50,000
+        </div>
         <div class="oneLakh betCommon" onclick="oneLakh()">100,000</div>
       </div>
-
-   
 
       <!-- MONETARY -->
       <div class="moneyDiv">
@@ -115,8 +107,6 @@
             Deposit
           </button>
         </div>
-
-
       </div>
     </div>
     <script src="./script.js"></script>
