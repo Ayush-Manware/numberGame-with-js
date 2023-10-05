@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: rgb(41, 41, 41);
+  background-color: cadetblue;
 }
 
 .logo {
@@ -120,20 +120,17 @@ body {
   filter: drop-shadow(2px 2px 5px greenyellow);
   color: greenyellow;
   width: 40vw;
-  font-size: 15vw;
 }
 
 .red {
   border: 2px solid ridge red;
   filter: drop-shadow(2px 2px 5px red);
   color: red;
-  width: 40vw;
-  font-size: 15vw;
 }
 
 .footer {
   padding: 0vw 3vw;
-  margin: 10px auto;
+  margin: 2vw auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,8 +139,9 @@ body {
 input {
   text-align: center;
   font-size: 3.2vw;
-  width: 18vw;
+  width: 20vw;
   color: gray;
+  padding: 1vw 0vw;
 }
 
 .checkButton {
@@ -152,11 +150,11 @@ input {
   box-shadow: #4b4bf4 0 10px 20px -10px;
   color: #ffffff;
   cursor: pointer;
-  font-size: 1.6vw;
-  padding: 1.5vw 3vw;
-  margin: 5px 0px;
+  font-size: 2vw;
+  padding: 1.5vw 0vw;
+  margin: 0.5vw auto;
   border: none;
-  width: 18vw;
+  width: 20vw;
 }
 
 .checkButton:hover {
@@ -168,7 +166,6 @@ input {
 .content {
   padding: 10px;
   text-align: center;
-  color: red;
 }
 
 .content > h3 {
@@ -215,9 +212,6 @@ input {
 }
 
 .moneyDiv{
-    background-color: var(--blurGray);
-    backdrop-filter: blur(20px);
-    border-radius: 12px;
     padding: 10px;
     width: 80vw;
     margin: 0vw auto;
@@ -225,18 +219,19 @@ input {
 }
 
 .currentBalance{
-  font-size: 3vw;
+  font-size: 4vw;
+  padding: 2vw 0vw 1vw 3vw;
+  background-color: var(--blurGray);
+  backdrop-filter: blur(10px);
 }
 
 .bet{
-  backdrop-filter: blur(20px);
-  background-color: var(--blurGray);
-  border-radius: 12px;
+  border-bottom: 3px solid white;
   margin: 1vw auto;
   box-sizing: border-box;
   display: grid;
   gap: 1vw;
-  padding: 10px;
+  padding: 0vw 0vw 3vw 0vw;
   width: 80vw;
 }
 
@@ -271,7 +266,7 @@ input {
 }
 
 .withdraw{
-  width: 35vw; 
+  width: 38vw; 
   color: var(--Textwhite);
   background-color: var(--blue);
   padding: 1vw;
@@ -283,7 +278,7 @@ input {
 
 .deposit{
   border-color: transparent;
-  width: 35vw; 
+  width: 38vw; 
   padding: 1vw;
   background-color: var(--blue);
   color: var(--Textwhite);
@@ -292,7 +287,62 @@ input {
   font-family: "Ysabeau Infant", sans-serif;
 }
 
+.blurDiv{
+  color: var(--Textwhite);
+  position: fixed;
+  top: 0px; 
+  left: 0px;
+  background-color:var(--blurGray);
+  backdrop-filter: blur(8px);
+  width: 100vw;
+  height: 155%;
+}
 
+.addMoney{
+  padding: 2vw;
+  background-color: cadetblue;
+  position: fixed;
+  top: 12vw;
+  left: 14vw;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  text-align: center;
+  /* box-shadow: 5px 5px 10px var(--blurGray); */
+}
+
+.moneyHeading{
+  font-size: 4vw;
+}
+
+.minimumAmount{
+  font-size: 3vw;
+}
+
+.moneyInput{
+  width: 95%;
+  margin: 2vw auto;
+  padding: 1vw 0.5vw;
+}
+
+.addButton{
+  width: 48%;
+  padding: 2.5vw;
+  font-size: 2vw; 
+  background-color: var(--blue);
+  color: var(--Textwhite);
+  border-color: transparent;
+  margin: 0vw 0.2vw 0vw 0vw; 
+}
+
+.cancelButton{
+  width: 48%;
+  padding: 2.5vw;
+  font-size: 2vw;  
+  background-color: var(--blue);
+  color: var(--Textwhite);
+  border-color: transparent;
+  margin: 0vw 0vw 0vw 0.2vw;
+}
 
 @media screen and (max-width: 600px) {
   body {
@@ -330,10 +380,6 @@ input {
   }
 
   .bet{
-    /* border: 1px solid white; */
-    backdrop-filter: blur(20px);
-    background-color: var(--blurGray);
-    border-radius: 12px;
     margin: 2vw auto;
     display: grid;
     gap: 5px;
@@ -425,6 +471,7 @@ input {
     box-shadow: #4b4bf4 0 10px 45px -10px;
     width: 80vw;
     font-size: 6vw;
+    margin: 2vw auto;
     box-sizing: border-box;
   }
 
@@ -455,7 +502,6 @@ input {
     color: rgb(0, 0, 0);
     padding: 2vw 0vw;
   }
-
 
   .withdraw{
     width: 45vw; 
@@ -504,12 +550,18 @@ input {
   }
 
   .moneyInput{
-    width: 95%;
+    width: 100%;
     margin: 3vw auto;
+    padding: 2vw;
   }
 
   .moneyHeading{
     text-align: center;
+    font-size: 10vw;
+  }
+
+  .minimumAmount{
+    font-size: 6vw;
   }
 
   .addButton{

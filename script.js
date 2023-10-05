@@ -1,5 +1,5 @@
 var randomNumber = (document.getElementById("$givenNumber").innerHTML =
-Math.trunc(Math.random() * 100 + 1));
+  Math.trunc(Math.random() * 100 + 1));
 console.log(randomNumber);
 
 // let hint = document.getElementById("hintPara");
@@ -26,7 +26,7 @@ function check() {
         "Your Number was lower, the Number was :" + randomNumber;
       document.getElementsByTagName("h3")[0].classList.add("red");
     } else if (inputNumber === randomNumber) {
-      document.getElementsByTagName("h3")[0].innerHTML = "You Found The Number";
+      document.getElementsByTagName("h3")[0].innerHTML = "Win Win Win!!!";
       document.getElementById("$givenNumber").innerHTML = randomNumber;
       document.getElementById("$checkButton").style.display = "none";
 
@@ -42,33 +42,35 @@ function check() {
   }
 
   if (inputNumber === randomNumber) {
+    document.getElementById("$givenNumber").classList.add("green");
     document.getElementsByTagName("h3")[0].classList.add("green");
-    var success = document.getElementById("$success");
-    success.classList.remove("hide");
-    // randomNumber.classList.add("red");
+
     setTimeout(() => {
       location.reload();
-    }, 2000);
+    }, 2500);
   }
 }
 
 function handleInput() {
   var h3 = document.getElementsByTagName("h3")[0];
   h3.innerHTML = "Start Guessing...";
+  let randomNumber = document.getElementById("$givenNumber");
+  randomNumber.classList.remove("red");
+  let afterWrong = document.getElementsByTagName("h3")[0];
+  afterWrong.classList.remove("red");
   document.getElementById("$givenNumber").classList.add("givenNumber");
-  document.getElementsByTagName("h3")[0].classList.remove("red");
-  document.getElementsByTagName("h3")[0].classList.remove("green");
 }
 
 function playAgain() {
   location.reload(false);
 }
 
-let count = 00;
+var count = parseInt(localStorage.getItem("depositAmount")) || 0;
+
+var balanceCount = document.getElementById("$balanceCount");
+balanceCount.innerHTML = count;
 var main = document.getElementById("$main");
 var isOpen = false;
-
-let balanceCount = document.getElementById("$balanceCount");
 
 function deposit() {
   if (!isOpen) {
@@ -109,12 +111,12 @@ function deposit() {
         let newBalance = (count += parseInt(moneyInput));
         localStorage.setItem("depositAmount", newBalance);
         let getStore = localStorage.getItem("depositAmount");
-        balanceCount.innerHTML = getStore
+        balanceCount.innerHTML = getStore;
       } else {
         alert("Minimum Amout is 200");
       }
       var getStore = localStorage.getItem("depositAmount");
-      balanceCount.innerHTML = getStore
+      balanceCount.innerHTML = getStore;
       isOpen = false;
       main.removeChild(blurDiv);
     });
